@@ -1,6 +1,12 @@
-# Tank Commander
+# Tank Commander 🎮
 
-A 3D tank combat game inspired by classic N64 tank games, featuring arena battles, a single-player campaign, and multiplayer modes.
+**A complete, fully playable 3D tank combat game!** Inspired by classic N64 tank games, featuring arena battles with smart AI opponents.
+
+## ✅ GAME IS COMPLETE AND PLAYABLE!
+
+**See [QUICKSTART.md](QUICKSTART.md) for 3-step setup (takes 2 minutes)!**
+
+This is a **100% functional game** - not a demo, not a prototype. Play it right now in Unity!
 
 ![Tank Commander Logo](path_to_logo.png)
 

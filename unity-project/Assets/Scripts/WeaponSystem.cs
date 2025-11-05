@@ -230,13 +230,23 @@ public class WeaponSystem : MonoBehaviour
     {
         // Play sound
         PlaySound(weapon.fireSound);
-        
-        // Play muzzle flash
+
+        // Play muzzle flash particle system
         if (weapon.muzzleFlash != null)
         {
             weapon.muzzleFlash.Play();
         }
-        
+
+        // Play procedural muzzle flash effect
+        if (weapon.firePoint != null)
+        {
+            TankCommander.MuzzleFlash flash = weapon.firePoint.GetComponent<TankCommander.MuzzleFlash>();
+            if (flash != null)
+            {
+                flash.Flash();
+            }
+        }
+
         // Add camera shake or other effects here
     }
 

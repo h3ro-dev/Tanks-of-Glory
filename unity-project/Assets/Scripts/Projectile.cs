@@ -151,7 +151,7 @@ public class Projectile : MonoBehaviour
         if (explosionPrefab != null)
         {
             GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-            
+
             // If the explosion has an audio source, play the impact sound
             AudioSource explosionAudio = explosion.GetComponent<AudioSource>();
             if (explosionAudio != null && impactSound != null)
@@ -163,14 +163,20 @@ public class Projectile : MonoBehaviour
                 // Play on this object's audio source if explosion doesn't have one
                 audioSource.PlayOneShot(impactSound);
             }
-            
+
             // Clean up explosion after 3 seconds
             Destroy(explosion, 3f);
         }
-        else if (audioSource != null && impactSound != null)
+        else
         {
-            // Play sound if no explosion prefab
-            AudioSource.PlayClipAtPoint(impactSound, transform.position);
+            // Use procedural explosion effect when no prefab is provided
+            TankCommander.ExplosionEffect.CreateExplosion(transform.position, explosionRadius);
+
+            // Play sound if available
+            if (audioSource != null && impactSound != null)
+            {
+                AudioSource.PlayClipAtPoint(impactSound, transform.position);
+            }
         }
     }
     
