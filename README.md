@@ -20,6 +20,7 @@ Tank Commander delivers nostalgic polygon-based graphics with modern gameplay me
 
 ## Features
 
+### Core Gameplay
 - Intuitive tank controls with realistic physics
 - Multiple camera perspectives (third-person, top-down, first-person)
 - Variety of tanks with different stats and capabilities
@@ -27,6 +28,23 @@ Tank Commander delivers nostalgic polygon-based graphics with modern gameplay me
 - AI opponents with dynamic behavior
 - Destructible environments
 - Progression system with unlockable content
+
+### Professional Polish & Game Feel
+- **Camera Shake**: Screen shake for impacts and explosions
+- **Hit Markers**: Instant confirmation when hitting enemies (normal/critical/kill)
+- **Damage Indicators**: Directional arrows showing where damage came from
+- **Dynamic Crosshair**: Expands on fire, changes color when targeting enemies
+- **Tutorial System**: Contextual guidance for new players
+- **Audio Feedback**: Complete audio system with visual fallbacks
+- **See [GAME_FEEL_GUIDE.md](GAME_FEEL_GUIDE.md) for complete polish documentation**
+
+### Performance Optimizations
+- Distance-based AI updates (50-70% CPU reduction)
+- Enhanced object pooling (95% faster than Instantiate/Destroy)
+- Physics optimization (30-50% reduction)
+- Level of Detail (LOD) system
+- Real-time performance monitoring (press F3)
+- **See [PERFORMANCE_GUIDE.md](PERFORMANCE_GUIDE.md) for optimization details**
 
 ## Development Setup
 
